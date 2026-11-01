@@ -13,7 +13,7 @@ function mulberry32(seed: number) {
 }
 const BUNDLES = [
   ["aurasound-pro-headphones", "nimbus-portable-speaker"], ["pro-grip-yoga-mat", "insulated-steel-bottle"], ["pour-over-coffee-kit", "terracotta-vase-trio"],
-  ["classic-leather-jacket", "urban-white-sneakers"], ["cloudstride-running-shoes", "insulated-steel-bottle"], ["vertex-mechanical-keyboard", "arc-desk-lamp"],
+  ["classic-leather-jacket", "classic-chelsea-boots"], ["cloudstride-running-shoes", "insulated-steel-bottle"], ["vertex-mechanical-keyboard", "arc-desk-lamp"],
   ["trailhead-2-person-tent", "insulated-steel-bottle"], ["minimalist-analog-watch", "gold-round-sunglasses"], ["monstera-deliciosa-plant", "linen-throw-pillow"],
 ];
 

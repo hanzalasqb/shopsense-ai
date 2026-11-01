@@ -22,7 +22,7 @@ const products: Product[] = PRODUCTS.map((p, i) => {
   reviews.set(p.slug, list);
   return { id: i + 1, slug: p.slug, name: p.name, category: p.category, categoryName: catName[p.category], price: p.price, compareAt: p.compareAt ?? null, stock: p.stock, rating: p.rating, reviewCount: list.length, tags: p.tags, description: p.description, features: p.features, image: p.image };
 });
-const BUNDLES = [["aurasound-pro-headphones", "nimbus-portable-speaker"], ["pro-grip-yoga-mat", "insulated-steel-bottle"], ["pour-over-coffee-kit", "terracotta-vase-trio"], ["classic-leather-jacket", "urban-white-sneakers"], ["cloudstride-running-shoes", "insulated-steel-bottle"], ["vertex-mechanical-keyboard", "arc-desk-lamp"], ["trailhead-2-person-tent", "insulated-steel-bottle"], ["minimalist-analog-watch", "gold-round-sunglasses"], ["monstera-deliciosa-plant", "linen-throw-pillow"]];
+const BUNDLES = [["aurasound-pro-headphones", "nimbus-portable-speaker"], ["pro-grip-yoga-mat", "insulated-steel-bottle"], ["pour-over-coffee-kit", "terracotta-vase-trio"], ["classic-leather-jacket", "classic-chelsea-boots"], ["cloudstride-running-shoes", "insulated-steel-bottle"], ["vertex-mechanical-keyboard", "arc-desk-lamp"], ["trailhead-2-person-tent", "insulated-steel-bottle"], ["minimalist-analog-watch", "gold-round-sunglasses"], ["monstera-deliciosa-plant", "linen-throw-pillow"]];
 const orders: (Order & { slugs: string[] })[] = [];
 for (let day = 30; day >= 0; day--) {
   for (let k = 0, n = 2 + Math.floor(rand() * 5); k < n; k++) {

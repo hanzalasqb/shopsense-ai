@@ -15,9 +15,10 @@ describe("query understanding", () => {
   it("ranks relevant products first and respects filters", () => {
     const results = rank(catalog, parseQuery("wireless noise cancelling headphones")).map((r) => r.product.slug);
     expect(results[0]).toBe("aurasound-pro-headphones");
-    const cheap = rank(catalog, parseQuery("shoes under $100"));
-    expect(cheap.every((r) => r.product.price <= 100)).toBe(true);
-    expect(cheap.map((r) => r.product.slug)).toContain("urban-white-sneakers");
+    const cheap = rank(catalog, parseQuery("shoes under $150"));
+    expect(cheap.every((r) => r.product.price <= 150)).toBe(true);
+    expect(cheap.map((r) => r.product.slug)).toContain("cloudstride-running-shoes");
+    expect(cheap.map((r) => r.product.slug)).not.toContain("classic-chelsea-boots");
   });
 });
 
