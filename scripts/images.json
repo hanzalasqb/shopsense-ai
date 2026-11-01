@@ -1,0 +1,82 @@
+[
+ {
+  "file": "client/public/images/products/aurasound-pro-headphones.jpg",
+  "url": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fm=jpg&fit=crop&w=800&h=800&q=75"
+ },
+ {
+  "file": "client/public/images/products/pulse-s2-smartwatch.jpg",
+  "url": "https://images.unsplash.com/photo-1579586337278-3befd40fd17a?auto=format&fm=jpg&fit=crop&w=800&h=800&q=75"
+ },
+ {
+  "file": "client/public/images/products/nimbus-portable-speaker.jpg",
+  "url": "https://images.unsplash.com/photo-1589003077984-894e133dabab?auto=format&fm=jpg&fit=crop&w=800&h=800&q=75"
+ },
+ {
+  "file": "client/public/images/products/vertex-mechanical-keyboard.jpg",
+  "url": "https://images.unsplash.com/photo-1618384887929-16ec33fab9ef?auto=format&fm=jpg&fit=crop&w=800&h=800&q=75"
+ },
+ {
+  "file": "client/public/images/products/retro-film-camera.jpg",
+  "url": "https://images.unsplash.com/photo-1510127034890-ba27508e9f1c?auto=format&fm=jpg&fit=crop&w=800&h=800&q=75"
+ },
+ {
+  "file": "client/public/images/products/classic-leather-jacket.jpg",
+  "url": "https://images.unsplash.com/photo-1551028719-00167b16eac5?auto=format&fm=jpg&fit=crop&w=800&h=800&q=75"
+ },
+ {
+  "file": "client/public/images/products/urban-white-sneakers.jpg",
+  "url": "https://images.unsplash.com/photo-1600269452121-4f2416e55c28?auto=format&fm=jpg&fit=crop&w=800&h=800&q=75"
+ },
+ {
+  "file": "client/public/images/products/minimalist-analog-watch.jpg",
+  "url": "https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fm=jpg&fit=crop&w=800&h=800&q=75"
+ },
+ {
+  "file": "client/public/images/products/heritage-leather-backpack.jpg",
+  "url": "https://images.unsplash.com/photo-1622560480605-d83c853bc5c3?auto=format&fm=jpg&fit=crop&w=800&h=800&q=75"
+ },
+ {
+  "file": "client/public/images/products/gold-round-sunglasses.jpg",
+  "url": "https://images.unsplash.com/photo-1511499767150-a48a237f0083?auto=format&fm=jpg&fit=crop&w=800&h=800&q=75"
+ },
+ {
+  "file": "client/public/images/products/terracotta-vase-trio.jpg",
+  "url": "https://images.unsplash.com/photo-1631125915902-d8abe9225ff2?auto=format&fm=jpg&fit=crop&w=800&h=800&q=75"
+ },
+ {
+  "file": "client/public/images/products/arc-desk-lamp.jpg",
+  "url": "https://images.unsplash.com/photo-1507473885765-e6ed057f782c?auto=format&fm=jpg&fit=crop&w=800&h=800&q=75"
+ },
+ {
+  "file": "client/public/images/products/pour-over-coffee-kit.jpg",
+  "url": "https://images.unsplash.com/photo-1758221052634-33f352d1318b?auto=format&fm=jpg&fit=crop&w=800&h=800&q=75"
+ },
+ {
+  "file": "client/public/images/products/linen-throw-pillow.jpg",
+  "url": "https://images.unsplash.com/photo-1629949009765-40fc74c9ec21?auto=format&fm=jpg&fit=crop&w=800&h=800&q=75"
+ },
+ {
+  "file": "client/public/images/products/monstera-deliciosa-plant.jpg",
+  "url": "https://images.unsplash.com/photo-1653404809389-f370ea4310dd?auto=format&fm=jpg&fit=crop&w=800&h=800&q=75"
+ },
+ {
+  "file": "client/public/images/products/pro-grip-yoga-mat.jpg",
+  "url": "https://images.unsplash.com/photo-1763004871583-4183d64096b1?auto=format&fm=jpg&fit=crop&w=800&h=800&q=75"
+ },
+ {
+  "file": "client/public/images/products/hex-dumbbell-pair.jpg",
+  "url": "https://images.unsplash.com/photo-1638536532686-d610adfc8e5c?auto=format&fm=jpg&fit=crop&w=800&h=800&q=75"
+ },
+ {
+  "file": "client/public/images/products/insulated-steel-bottle.jpg",
+  "url": "https://images.unsplash.com/photo-1625708458528-802ec79b1ed8?auto=format&fm=jpg&fit=crop&w=800&h=800&q=75"
+ },
+ {
+  "file": "client/public/images/products/cloudstride-running-shoes.jpg",
+  "url": "https://images.unsplash.com/photo-1560769629-975ec94e6a86?auto=format&fm=jpg&fit=crop&w=800&h=800&q=75"
+ },
+ {
+  "file": "client/public/images/products/trailhead-2-person-tent.jpg",
+  "url": "https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?auto=format&fm=jpg&fit=crop&w=800&h=800&q=75"
+ }
+]
