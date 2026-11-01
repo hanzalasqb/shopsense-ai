@@ -1,6 +1,7 @@
 import { describe, expect, it } from "vitest";
 import { ruleAssistant } from "../../shared/assistant";
 import { PRODUCTS } from "../../shared/catalog";
+import { templateCopy } from "../../shared/copywriter";
 import { computeTotals } from "../../shared/pricing";
 import { boughtTogether, similarProducts } from "../../shared/recommend";
 import { parseQuery, rank } from "../../shared/search";
@@ -45,5 +46,22 @@ describe("rule-based assistant", () => {
     const cmp = ruleAssistant("compare the smartwatch vs the analog watch", catalog);
     expect(cmp.tool.name).toBe("compare_products");
     expect(cmp.products).toHaveLength(2);
+  });
+});
+
+describe("template copywriter", () => {
+  it("writes feature-specific, non-repeating bullets in the chosen tone", () => {
+    const copy = templateCopy({ name: "Bamboo Desk Organizer", category: "home", tone: "friendly", features: ["Sustainable bamboo", "5 compartments", "Non-slip base"] });
+    expect(copy.description).toMatch(/^Meet your new favourite: the Bamboo Desk Organizer brings sustainable bamboo and 5 compartments/);
+    expect(copy.bullets).toEqual([
+      "Sustainable bamboo — a choice that feels good, too",
+      "5 compartments — keeps the essentials in their place",
+      "Non-slip base — stays put while you work or train",
+    ]);
+    expect(new Set(copy.bullets).size).toBe(copy.bullets.length);
+    expect(copy.seoKeywords).toContain("bamboo desk organizer");
+    const tech = templateCopy({ name: "Trail Speaker", category: "electronics", tone: "technical", features: ["IP67 waterproof", "20-hour battery", "Bluetooth 5.3"] });
+    expect(tech.bullets[0]).toBe("IP67 waterproof: ready for rain, spills and the outdoors.");
+    expect(tech.description).toMatch(/to your tech setup\. Specified for reliability/);
   });
 });

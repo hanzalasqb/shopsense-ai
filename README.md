@@ -15,7 +15,7 @@ A full-stack online store with **natural-language AI search**, a **tool-calling 
 ![Drizzle](https://img.shields.io/badge/Drizzle_ORM-C5F74F?logo=drizzle&logoColor=black)
 ![React](https://img.shields.io/badge/React-19-61DAFB?logo=react&logoColor=black)
 ![Tailwind](https://img.shields.io/badge/Tailwind_CSS-4-06B6D4?logo=tailwindcss&logoColor=white)
-![Vitest](https://img.shields.io/badge/Vitest-14_tests-6E9F18?logo=vitest&logoColor=white)
+![Vitest](https://img.shields.io/badge/Vitest-15_tests-6E9F18?logo=vitest&logoColor=white)
 
 <img src="docs/screenshots/home.png" alt="ShopSense AI home page" width="100%" />
 
@@ -42,15 +42,17 @@ A full-stack online store with **natural-language AI search**, a **tool-calling 
 - 🧮 Stock decrements are **atomic** (`UPDATE … WHERE stock >= qty`) inside a transaction, so concurrent orders can't oversell
 - 🛡️ Helmet, CORS, rate limiting (stricter on AI endpoints), Zod validation everywhere and prompt-injection-aware prompts
 - 🗄️ Drizzle ORM with SQL migrations. **PostgreSQL** in production, embedded **PGlite** (Postgres in WASM) for local dev and tests, so no setup is needed
-- ♻️ Search, pricing and recommendation logic lives in a `shared/` TypeScript package used by both the API and the browser
+- ♻️ Search, pricing, recommendation and copywriting logic lives in a `shared/` TypeScript package used by both the API and the browser
 
 ## 📸 Screenshots
 
 | AI search: understands intent | Product page with AI review summary |
 |---|---|
 | <img src="docs/screenshots/search.png" alt="AI search results" /> | <img src="docs/screenshots/product.png" alt="Product page" /> |
-| **Shopping assistant adds to cart** | **Admin analytics + AI copywriter** |
+| **Shopping assistant adds to cart** | **Admin analytics dashboard** |
 | <img src="docs/screenshots/assistant.png" alt="AI assistant" /> | <img src="docs/screenshots/admin.png" alt="Admin dashboard" /> |
+| **AI product copywriter** | **Cart with free-shipping progress** |
+| <img src="docs/screenshots/copywriter.png" alt="AI product copywriter" /> | <img src="docs/screenshots/cart.png" alt="Cart drawer" /> |
 
 ## 🏗️ Architecture
 
@@ -118,7 +120,7 @@ Without `LLM_API_KEY`, search and the assistant use the built-in NLP engine. Add
 cd server && npm test
 ```
 
-The tests cover query understanding, TF-IDF ranking, pricing rules, discount codes, overselling prevention, auth/RBAC, analytics, review summaries, the rule-based assistant and the **LLM tool-calling loop** (a scripted fake LLM searches and then adds to cart).
+The tests cover query understanding, TF-IDF ranking, pricing rules, discount codes, overselling prevention, auth/RBAC, analytics, review summaries, the template copywriter, the rule-based assistant and the **LLM tool-calling loop** (a scripted fake LLM searches and then adds to cart).
 
 ## 📁 Structure
 

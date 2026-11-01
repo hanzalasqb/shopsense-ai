@@ -1,6 +1,7 @@
 // Browser-only store used by the GitHub Pages demo: same shared search/pricing/recommendation code as the server.
 import { ruleAssistant, type AssistantProduct } from "../../../shared/assistant";
 import { CATEGORIES, PRODUCTS, REVIEW_TEMPLATES } from "../../../shared/catalog";
+import { templateCopy } from "../../../shared/copywriter";
 import { computeTotals } from "../../../shared/pricing";
 import { boughtTogether, similarProducts } from "../../../shared/recommend";
 import { parseQuery, rank } from "../../../shared/search";
@@ -99,8 +100,7 @@ export const demoApi: Api = {
   },
   generateDescription: async (input) => {
     await wait(800);
-    const opener = ({ premium: "Crafted for those who expect more,", friendly: "Meet your new favourite:", technical: "Engineered for performance," } as Record<string, string>)[input.tone] ?? "Meet";
-    return { engine: "template", description: `${opener} the ${input.name} brings ${input.features.slice(0, 2).join(" and ").toLowerCase() || "thoughtful design"} to your everyday ${input.category}. Built to last and designed to delight.`, bullets: input.features.slice(0, 4).map((f) => `${f} — so you get more out of every day`), seoKeywords: [...new Set([input.name.toLowerCase(), input.category, ...input.features.flatMap((f) => f.toLowerCase().split(/\W+/).filter((w) => w.length > 4))])].slice(0, 6) };
+    return templateCopy(input);
   },
   async assistant(message, _history, lastShown, onEvent) {
     const reply = ruleAssistant(message, products as AssistantProduct[], lastShown);

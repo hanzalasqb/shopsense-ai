@@ -1,5 +1,6 @@
 import { eq } from "drizzle-orm";
 import { z } from "zod";
+import { templateCopy } from "../../../shared/copywriter";
 import { parseQuery, type SearchFilters } from "../../../shared/search";
 import type { DB } from "../db/client";
 import { aiCache, reviews } from "../db/schema";
@@ -83,11 +84,5 @@ export async function generateDescription(llm: LLM, input: z.infer<typeof Descri
       return { ...out, engine: "llm" };
     } catch { /* fall back */ }
   }
-  const opener = { premium: "Crafted for those who expect more,", friendly: "Meet your new favourite:", technical: "Engineered for performance," }[input.tone];
-  return {
-    engine: "template",
-    description: `${opener} the ${input.name} brings ${input.features.slice(0, 2).join(" and ").toLowerCase() || "thoughtful design"} to your everyday ${input.category}. Built to last and designed to delight.`,
-    bullets: input.features.slice(0, 4).map((f) => `${f} — so you get more out of every day`),
-    seoKeywords: [...new Set([input.name.toLowerCase(), input.category, ...input.features.flatMap((f) => f.toLowerCase().split(/\W+/).filter((w) => w.length > 4))])].slice(0, 6),
-  };
+  return templateCopy(input);
 }

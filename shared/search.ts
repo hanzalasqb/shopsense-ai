@@ -8,7 +8,9 @@ const CATEGORY_WORDS: Record<string, string[]> = {
   home: ["home", "decor", "kitchen", "lamp", "vase", "pillow", "plant", "coffee", "living", "furniture", "cozy"],
   sports: ["sport", "sports", "fitness", "gym", "yoga", "running", "camping", "hiking", "outdoor", "workout", "training"],
 };
-const STOP = new Set("a an the for me my i to and or of with in on under below less than over above more cheap cheapest best show find need want looking some something that is are good great nice top rated new under$ budget".split(" "));
+const STOP = new Set("a an the for me my i to and or of with in on under below less than over above more cheap cheapest best show find need want looking some something anything that is are good great nice top rated new budget gear stuff item items thing things product products idea ideas option options".split(" "));
+// generic words that only select a category (they should not also be required as keywords)
+const CATEGORY_TRIGGERS = new Set(["electronics", "fashion", "home", "sports", "tech", "fitness", "decor", "clothing", "outdoor", "gadget", "gadgets", "accessories"]);
 const SYNONYMS: Record<string, string> = { earphones: "headphones", earbuds: "headphones", trainers: "sneakers", bag: "backpack", rucksack: "backpack", mug: "coffee", present: "gift", cosy: "cozy", warm: "winter", jog: "running", jogging: "running" };
 
 export function parseQuery(raw: string): SearchFilters {
@@ -26,7 +28,7 @@ export function parseQuery(raw: string): SearchFilters {
   for (const [cat, list] of Object.entries(CATEGORY_WORDS)) {
     if (words.some((w) => w === cat || (list.includes(w) && ["fashion", "electronics", "home", "sports", "tech", "fitness", "decor", "clothing", "outdoor"].includes(w)))) f.category = cat;
   }
-  f.keywords = [...new Set(words.filter((w) => !STOP.has(w) && w.length > 1 && !/^\d+$/.test(w)))];
+  f.keywords = [...new Set(words.filter((w) => !STOP.has(w) && w.length > 1 && !/^\d+$/.test(w) && !(f.category && CATEGORY_TRIGGERS.has(w))))];
   return f;
 }
 
