@@ -81,7 +81,7 @@ export const PRODUCTS: ProductDef[] = [
 // Unsplash photo ids (free Unsplash License) fetched by scripts/fetch-images.mjs in CI.
 export const PRODUCT_PHOTOS: Record<string, string> = {
   "aurasound-pro-headphones": "photo-1505740420928-5e560c06d30e", "pulse-s2-smartwatch": "photo-1660844817855-3ecc7ef21f12",
-  "nimbus-portable-speaker": "photo-1547052178-7f2c5a20c332", "vertex-mechanical-keyboard": "photo-1618384887929-16ec33fab9ef",
+  "nimbus-portable-speaker": "photo-1582978571763-2d039e56f0c3", "vertex-mechanical-keyboard": "photo-1618384887929-16ec33fab9ef",
   "retro-vinyl-turntable": "photo-1496293455970-f8581aae0e3b", "classic-leather-jacket": "photo-1551028719-00167b16eac5",
   "classic-chelsea-boots": "photo-1534233812932-59b8fa1b780c", "minimalist-analog-watch": "photo-1524592094714-0f0654e20314",
   "heritage-leather-backpack": "photo-1622560480605-d83c853bc5c3", "gold-round-sunglasses": "photo-1511499767150-a48a237f0083",
